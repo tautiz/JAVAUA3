@@ -1,0 +1,9 @@
+div {
+   color: rgb(0,255,0);
+}
+
+.produktai div:nth-of-type(3) {
+   width: 100px;
+   height: 100px;
+   color: aqua;
+}
