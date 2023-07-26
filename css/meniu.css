@@ -7,3 +7,51 @@ nav a {
     color: white;
     text-decoration: none;
 }
+
+body > *,
+.container > aside,
+.container > main {
+    border: 1px solid hotpink;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    background-color: hotpink;
+}
+
+.container > aside {
+    width: 12%;
+    float: left;
+    background-color: aqua;
+}
+
+.container > main {
+    width: 88%;
+    float: right;
+    background-color: yellow;
+}
+
+body > footer {
+    background-color: #414141;
+    color: white;
+}
+
+header {
+    display: flex;
+}
+
+header > div {
+    background-color: #414141;
+    color: white;
+    float: left;
+}
+
+header > nav {
+    background-color: #7a53c7;
+    float: right;
+}
+
+
+
