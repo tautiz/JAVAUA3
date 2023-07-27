@@ -2,8 +2,20 @@ div {
    color: rgb(0,255,0);
 }
 
-.produktai div:nth-of-type(3) {
-   width: 100px;
-   height: 100px;
-   color: aqua;
+body > *{
+   border: 1px solid hotpink;
+   padding: 10px;
+}
+
+body > aside {
+   background-color: aqua;
+}
+
+body > main {
+   background-color: yellow;
+}
+
+body > footer {
+   background-color: #414141;
+   color: white;
 }

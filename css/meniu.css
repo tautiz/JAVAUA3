@@ -8,36 +8,6 @@ nav a {
     text-decoration: none;
 }
 
-body > *,
-.container > aside,
-.container > main {
-    border: 1px solid hotpink;
-    padding: 10px;
-    margin: 10px;
-}
-
-.container {
-    display: flex;
-    background-color: hotpink;
-}
-
-.container > aside {
-    width: 12%;
-    float: left;
-    background-color: aqua;
-}
-
-.container > main {
-    width: 88%;
-    float: right;
-    background-color: yellow;
-}
-
-body > footer {
-    background-color: #414141;
-    color: white;
-}
-
 header {
     display: flex;
 }
@@ -53,5 +23,7 @@ header > nav {
     float: right;
 }
 
-
-
+body > header {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
