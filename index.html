@@ -3,24 +3,23 @@
     <title>Pradzia</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/manodizainas.css">
-    <link rel="stylesheet" href="/css/meniu.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/meniu.css">
+    <link rel="stylesheet" href="/css/manodizainas.css">
+    <script src="/js/darbas_su_DOM.js" defer></script>
+    <script src="/js/menu.js" defer></script>
 </head>
 <!-- Tai mano pagrindinis kodas-->
 <body>
 
 <header>
-    <div>LOGO</div>
+    <div class="logo">
+        <img src="/img/company_logo.png" alt="Logo">
+    </div>
     <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About us</a></li>
-            <li><a href="/products.html">Products</a></li>
-            <li><a href="/contacts.html">Contact us</a></li>
-        </ul>
+        <input type="search">
     </nav>
+
 </header>
 <aside>
     <span>Aside</span>
@@ -68,6 +67,19 @@
         quae quidem. Autem commodi dolore, eaque eum eveniet expedita impedit ipsa itaque, officiis pariatur ratione
         saepe totam vel. Animi architecto blanditiis iure magnam maxime sapiente ullam.
     </p>
+    <div class="js_elementai">
+        <span id="unikalusElementas">Labas pasauli</span>
+
+        <img src="https://picsum.photos/200/300?random=1" alt="img1" class="galerijosFoto">
+        <img src="https://picsum.photos/200/300?random=2" alt="img2" class="galerijosFoto">
+        <img src="https://picsum.photos/200/300?random=3" alt="img3" class="galerijosFoto">
+
+        <ul class="wrapper">
+            <li class="element">Tekstas1</li>
+            <li class="element">Tekstas2</li>
+            <li class="element">Tekstas3</li>
+        </ul>
+    </div>
 </main>
 <footer>
     <div>Footer: All rights reserved &copy;2023</div>

@@ -1,18 +1,16 @@
-div {
-   color: rgb(0,255,0);
+:root {
+   --main-color: #414141;
+   --secondary-color: #000000;
 }
-
 body > *{
-   border: 1px solid hotpink;
    padding: 10px;
 }
 
 body > aside {
-   background-color: aqua;
+   border-right: 1px solid var(--main-color);
 }
 
 body > main {
-   background-color: yellow;
 }
 
 body > footer {
