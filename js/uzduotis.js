@@ -63,7 +63,7 @@ function printArray() {
         let  separator = ' | ';
         // Jei tai pirmasis ciklas tuomet skyriklio tekstas isvalomas
         // (Kad pries pirma masyvo elementa jis nebutu vaizduojamas)
-        if (i > 0) {
+        if (i === 0) {
             separator = '';
         }
         // I OUTPUT elementa pridedame skyriklio teksta ir masyvo reiksme
