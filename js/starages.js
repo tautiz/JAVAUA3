@@ -27,7 +27,16 @@ function getFromStorage(raktoPavadinimas) {
 
 // Funkcija kuri saugo duomenis i pasirinkta storage varianta
 function store(raktoPavadinimas, verte) {
-    storage.setItem(raktoPavadinimas, verte);
+    // Gauta teksta is input 'verte' konvertuojame i Objekta su papildoma info 'data'
+    const obj = {
+        param: verte,
+        data: '2023-01-01'
+    };
+    // Objekta paverciame i teksto eilute
+    const objString = JSON.stringify(obj);
+
+    // i storage saugome konvertuota teksto eilute
+    storage.setItem(raktoPavadinimas, objString);
 }
 
 // Papildoma info kaip pakeisti STORAGE tipa
@@ -48,7 +57,10 @@ forma.addEventListener('submit', event => {
 
 // Tai atskirta uzduoties dalis kuri atlieka spausdinima H2 elemente
 readButton.addEventListener('click', e => {
-    h2.textContent = getFromStorage('raktoPavadinimas');
+    const duomenys = getFromStorage('raktoPavadinimas');
+    // Gauta JSON irasa is Storage konvertuojame atgal i Objekta
+    const objektas = JSON.parse(duomenys)
+    h2.textContent = objektas.data + ' ] ' +objektas.param;
 });
 
 
