@@ -1,19 +1,116 @@
 :root {
-   --main-color: #414141;
-   --secondary-color: #000000;
+    --main-color: #414141;
+    --secondary-color: #000000;
+    --border-color: hsl(208, 72%, 39%);
+
 }
-body > *{
-   padding: 10px;
+
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+body > * {
+    padding: 10px;
 }
 
 body > aside {
-   border-right: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
 }
 
 body > main {
 }
 
 body > footer {
-   background-color: #414141;
-   color: white;
+    background-color: #414141;
+    color: white;
 }
+
+/*     FORMOS ELEMENTAI    */
+form{
+    padding: 30px;
+    border: 3px solid var(--border-color);
+    border-radius: 0.5em;
+}
+
+label, input, button, .button, textarea {
+    color: var(--border-color);
+    padding: .5em 1em;
+    background: transparent;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+.radio {
+    margin-left: 20px;
+    display: inline-block;
+    height: 25px;
+    cursor: pointer;
+}
+.radio span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    position: relative;
+    display: block;
+    left:-33px;
+    top: -23px;
+}
+.radio span::after {
+    content: '';
+    height: 8px;
+    width: 8px;
+    background: var(--border-color);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+.radio input[type="radio"]:checked ~ span:after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input, button, .button, textarea {
+    display: inline-block;
+    border: 3px solid var(--border-color);
+    border-radius: .25em;
+}
+
+button, .button {
+    cursor: pointer;
+    text-decoration: none;
+
+    position: relative;
+    isolation: isolate;
+}
+
+button::after, .button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: var(--border-color);
+    inset: 0;
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 450ms;
+}
+
+button:hover,
+.button:hover {
+    color: white;
+}
+
+button:hover::after,
+button:focus-visible::after,
+.button:hover::after,
+.button:focus-visible::after {
+    scale: 1 1;
+    transform-origin: left;
+}
+

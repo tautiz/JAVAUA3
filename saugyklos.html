@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saugyklos</title>
+    <script src="js/starages.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,700;0,900;1,100;1,600;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/manodizainas.css">
+    <style>
+        /*Turinio centravimui*/
+        html, body {
+            height: 100%;
+        }
+        body{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+<form id="manoForma">
+    <h1>Saugyklos</h1>
+
+    <input type="text" name="data">
+    <h2 id="output"></h2>
+    <hr>
+    <label for="l_storage" class="radio">
+        <input type="radio" id="l_storage" name="saugyklosTipas" checked value="localStorage">
+        Vietine saugykla
+        <span></span>
+    </label><br>
+    <label for="s_storage" class="radio">
+        <input type="radio" id="s_storage" name="saugyklosTipas" value="sessionStorage">
+        Sesijos saugykla
+        <span></span>
+    </label><br>
+    <hr>
+    <button type="submit">Saugoti</button>
+    <button type="button" id="read">Skaityti</button>
+</form>
+
+</body>
+</html>
