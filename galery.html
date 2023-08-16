@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerija</title>
+    <script src="/js/galery.js" defer></script>
+    <style>
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 10px;
+            place-items: center;
+        }
+        .placeholder {
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .placeholder:before{
+            content: 'Loading...';
+            position: absolute;
+            white-space: pre;
+            display: inline;
+            transform: translate(100%, -125px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery"></div>
+</body>
+</html>
